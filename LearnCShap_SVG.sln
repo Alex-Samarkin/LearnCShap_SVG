@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCShap_SVG", "LearnCShap_SVG\LearnCShap_SVG.csproj", "{17ADA9DC-C5A5-4EB6-BDD5-03F2550EDF37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGClassLibrary", "SVGClassLibrary\SVGClassLibrary.csproj", "{FD19FAEA-9D9A-4B5A-A2F2-3BBDA04443B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17ADA9DC-C5A5-4EB6-BDD5-03F2550EDF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17ADA9DC-C5A5-4EB6-BDD5-03F2550EDF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17ADA9DC-C5A5-4EB6-BDD5-03F2550EDF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17ADA9DC-C5A5-4EB6-BDD5-03F2550EDF37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD19FAEA-9D9A-4B5A-A2F2-3BBDA04443B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD19FAEA-9D9A-4B5A-A2F2-3BBDA04443B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD19FAEA-9D9A-4B5A-A2F2-3BBDA04443B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD19FAEA-9D9A-4B5A-A2F2-3BBDA04443B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8A43792-75C5-4A95-B6F3-B94CD3DE43F3}
+	EndGlobalSection
+EndGlobal
