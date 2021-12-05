@@ -12,6 +12,7 @@ namespace LearnCShap_SVG
     {
         static void Main(string[] args)
         {
+            /// Введение
             Console.WriteLine(SVGNotes.Intro);
             Console.WriteLine(SVGNotes.Ch1);
             /// SVG документ
@@ -24,6 +25,8 @@ namespace LearnCShap_SVG
             /// отображение файла
             svg.ShowFile();
 
+            /// Часть 2
+            Console.WriteLine(SVGNotes.Ch2);
             var key = Console.ReadKey();
         }
     }
