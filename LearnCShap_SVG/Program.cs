@@ -15,18 +15,28 @@ namespace LearnCShap_SVG
             /// Введение
             Console.WriteLine(SVGNotes.Intro);
             Console.WriteLine(SVGNotes.Ch1);
+
+            /// Часть 2
+            Console.WriteLine(SVGNotes.Ch2);
+
             /// SVG документ
             SVGDoc svg = new SVGDoc();
+            
             /// создание шапки и завершающей части
             Console.WriteLine(svg.GenerateStart());
+
+            /// добавление линии
+            svg.Add(new SVGLine());
+            /// добавьте еще одну линию 0,900 - 800,300
+
+            Console.WriteLine(svg.SVGGenerateText());
             Console.WriteLine(svg.GenerateEnd());
             /// запись в файл
             svg.WriteToFile();
             /// отображение файла
             svg.ShowFile();
 
-            /// Часть 2
-            Console.WriteLine(SVGNotes.Ch2);
+           
             var key = Console.ReadKey();
         }
     }

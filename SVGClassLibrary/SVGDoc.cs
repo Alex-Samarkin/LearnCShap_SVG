@@ -8,6 +8,7 @@
 // 0:30 05 12 2021
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -117,7 +118,7 @@ namespace SVGClassLibrary
         /// <summary>
         /// завершающий тег документа
         /// </summary>
-        public string EndTag => "</svg>\r\n"+ "<!-- SVG создан -->\r\n";
+        public string EndTag => "\r\n</svg>\r\n"+ "<!-- SVG создан -->\r\n";
         /// <summary>
         /// добавление закрывающего элемент тега
         /// </summary>
@@ -130,5 +131,35 @@ namespace SVGClassLibrary
         }
 
         #endregion
+
+        #region SVG_Items
+
+        public List<SVGItem> Items { get; set; } = new List<SVGItem>() { new SVGItem() };
+        public void Add(SVGItem item) => Items.Add(item);
+
+        public void Insert(SVGItem item, int index=0)
+        {
+            // проверка на допустимый индекс
+            index = index < 0 ? 0 : (index > Items.Count ? Items.Count : index);
+            Items.Insert(index,item);
+        }
+
+        /// <summary>
+        /// создание тегов всех графических элементов
+        /// </summary>
+        /// <returns></returns>
+        public string SVGGenerateText()
+        {
+            foreach (SVGItem item in Items)
+            {
+                string s = item.GenerateTag();
+                SB.AppendLine(s);
+            }
+
+            return SB.ToString();
+        }
+
+        #endregion
+
     }
 }
