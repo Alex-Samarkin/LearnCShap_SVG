@@ -32,7 +32,7 @@ namespace SVGClassLibrary
         /// <summary>
         /// строка - часть тега заливки, нет первого пробела, нет переноса строки 
         /// </summary>
-        public string FillString => $"fill=\"{FillColor}\" +" +
+        public string FillString => $"fill=\"{FillColor}\" " +
                                     $"fill-opacity=\"{FillOpacity,4:F2}\"";
         /// <summary>
         /// строка - часть тега строки, нет первого пробела, нет переноса строки 

@@ -43,12 +43,16 @@
   <ItemGroup>
     <Compile Include="ISVG_Tag.cs" />
     <Compile Include="SVGBrush.cs" />
+    <Compile Include="SVGCircle.cs" />
     <Compile Include="SVGDoc.cs" />
+    <Compile Include="SVGEllipse.cs" />
     <Compile Include="SVGItem.cs" />
     <Compile Include="SVGLine.cs" />
     <Compile Include="SVGNotes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SVGPoint.cs" />
+    <Compile Include="SVGRectangle.cs" />
+    <Compile Include="SVGRoundRectangle.cs" />
     <Compile Include="WebColors.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

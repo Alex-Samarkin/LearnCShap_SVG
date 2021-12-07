@@ -28,5 +28,10 @@ namespace SVGClassLibrary
 
         public int Dx(SVGPoint pt) => pt.X - X;
         public int Dy(SVGPoint pt) => pt.Y - Y;
+
+        public SVGPoint CopySvgPoint()
+        {
+            return new SVGPoint() { X = this.X, Y = this.Y };
+        }
     }
 }
