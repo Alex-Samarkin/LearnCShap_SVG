@@ -50,9 +50,14 @@
     <Compile Include="SVGLine.cs" />
     <Compile Include="SVGNotes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SVGPath.cs" />
     <Compile Include="SVGPoint.cs" />
+    <Compile Include="SVGPoly.cs" />
+    <Compile Include="SVGPolyGon.cs" />
+    <Compile Include="SVGPolyLine.cs" />
     <Compile Include="SVGRectangle.cs" />
     <Compile Include="SVGRoundRectangle.cs" />
+    <Compile Include="SVGText.cs" />
     <Compile Include="WebColors.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

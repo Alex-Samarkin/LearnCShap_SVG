@@ -23,7 +23,7 @@ namespace LearnCShap_SVG
             Console.WriteLine(SVGNotes.Ch3);
 
             /// SVG документ
-            SVGDoc svg = new SVGDoc();
+            SVGDoc svg = new SVGDoc() { Ext = "html",FileName="NewSVG" };
             
             /// создание шапки и завершающей части
             Console.WriteLine(svg.GenerateStart());
@@ -77,6 +77,45 @@ namespace LearnCShap_SVG
             rrct.Pt1.Y = svg.Height - 50;
             svg.Add(rrct);
 
+            var poly = new SVGPoly() { 
+                Pt0 = new SVGPoint() { X=50, Y=300} ,
+                Pt1 = new SVGPoint() { X=1500, Y =300 }
+            };
+
+            /// замените на true
+            poly.IsOpen = false;
+            poly.Brush.FillColor = WebColors.RoyalBlue;
+            poly.Brush.FillOpacity = 0.5;
+
+            /*
+             * var r = new Random();
+            for (int i = 0; i < 500; i++)
+            {
+                poly.Add(50 + (i + 1) * 30, 300 + r.Next(-100, 100));
+            }*/
+            poly.RandomY(500, 50);
+
+            var pl = new SVGPolyLine();
+            pl.Triangles(100, 500, 1000, 50, 10);
+
+            svg.Add(poly);
+            svg.Add(pl);
+
+            SVGPath path = new SVGPath();
+            path.Pt0.X = 40;
+            path.Pt0.Y = 700;
+            path.Pt1.X = 1500;
+            path.Pt1.Y = 700;
+            path.AddDeltaPathPoint(300, 30, 15, 15);
+            path.AddDeltaPathPoint(300, 30, 150, -150);
+            path.AddDeltaPathPoint(300, 30, 15, 15);
+            svg.Add(path);
+
+            SVGText text = new SVGText();
+            text.Brush.LineColor = WebColors.Chocolate;
+            text.Pt0.X = 500; text.Pt0.Y = 500;
+            text.Text = "Hello hello Привет участникам";
+            svg.Add(text);
 
 
             Console.WriteLine(svg.SVGGenerateText());
