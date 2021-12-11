@@ -15,7 +15,8 @@ namespace GraphApp
             GraphDoc doc = new GraphDoc();
             doc.GenerateStart();
             doc.MakeFormat();
-            doc.RandomCircles(110000);
+            /// doc.RandomCircles(110000);
+            doc.RandomRect(80000);
             doc.SVGGenerateText();
             doc.GenerateEnd();
             doc.WriteToFile();

@@ -87,5 +87,34 @@ namespace GraphLibrary
             }
 
         }
+        public void RandomRect(int count = 5000)
+        {
+            var r = new Random();
+            for (int i = 0; i < count; i++)
+            {
+                var w = r.Next(3, 200);
+                var h = r.Next(3,200);
+                int x1 = (int)r.Next(20+5,this.Width-20-5-w);
+                int y1 = (int)r.Next(20 + 5, this.Height - 35 - 5-h);
+                int x2 = x1 + w;
+                int y2 = y1 + h;
+
+                SVGRectangle c = new SVGRectangle()
+                {
+                    Pt0 = new SVGPoint() { X = x1, Y = y1 },
+                    Pt1 = new SVGPoint() { X = x2, Y = y2 },
+                    Brush = new SVGBrush
+                    {
+                        LineColor = WebColors.Black,
+                        FillColor = WebColors.Ivory,
+                        FillOpacity = 0.3,
+                        StrokeWidth = 2,
+                        StrokeOpacity = 0.5
+                    }                    
+                };
+                Add(c);
+            }
+
+        }
     }
 }
